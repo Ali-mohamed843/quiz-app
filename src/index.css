@@ -1,15 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+/*  */
 
-@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.dark {
-  color-scheme: dark;
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 20px;
+  /* Width of the scrollbar */
 }
 
-* {
-  @apply transition-colors duration-200;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* Color of the track */
+  border-radius: 20px;
 }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Color of the handle */
+  border-radius: 4px;
+  /* Border radius of the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Color of the handle on hover */
+}
+
+
+
+/*  */

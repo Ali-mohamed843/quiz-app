@@ -1,49 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Header  from './components/Header';
-import Sidebar from './components/Sidebar'; 
-import Main from './components/Main';
-import Content from './components/content';
-import Profile from './components/profile';
-import Stats from './components/Stats';
-import Team from './components/Team';
-import Event from './components/Event';
+import { BrowserRouter as Router } from "react-router-dom"
+import Home from "./pages/Home"
 
 
-const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  }
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  }
-
-
+function App() {
   return (
-      <div className={`${darkMode ? "dark" : ""}  font-quickSand`}>
-          <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} toggleSidebar={toggleSidebar} />
+    <>
+      <Router>
+        <main className="w-full h-screen min-h-screen text-neutral-600 flex flex-col bg-[#120038] text-black relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:20px_20px] z-0 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#20004d] via-[#1a0037] to-[#0b001d] opacity-80 z-0" />
+          <Home />
+        </main>
+      </Router>
+    </>
+  )
+}
 
-          <Sidebar isSidebarOpen={isSidebarOpen}/>
-
-          <Main >
-            <content>
-              <Stats darkMode={darkMode} />
-
-              <div className='flex flex-col gap-3 lg:flex-row'>
-                <Team />
-                <Event />
-              </div>
-            </content>
-            <Profile />
-          </Main>
-      </div>
-  );
-};
-
-export default App;
-
-
+export default App
 

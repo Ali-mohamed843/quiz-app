@@ -5,13 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        quickSand: ["Quicksand", "sans-serif"]
-      }
-    },
+    extend: {},
   },
   plugins: [],
-  darkMode: "class",
 }
-
