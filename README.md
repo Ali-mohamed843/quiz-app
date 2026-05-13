@@ -1,98 +1,47 @@
+# Quiz App
 
-# Weather App
-
-API Integrated Weather App Using Reactjs and Tailwind CSS.
-
-
-## Installation
-
-Install with npm
-
-Clone the project
-
-```bash
-  git clone https://github.com/gtech-official08/quiz-app.git
-```
-
-Remove `.git` an `README.md` if you want to push this repo on your github.com.
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-``` bash
-npm install
-```
-OR 
-
-```bash
-npm i
-```
-
-Start the server
-
-``` bash
-npm run dev
-```
-
-If you want to see live project on your mobile or other local machine with same wifi connection.
-
-```bash
-npm run dev -- --host
-```
-
-
-## Usages
-
+A responsive quiz application built with React, Vite, and Tailwind CSS. Users can choose a quiz category, difficulty, question type, and number of questions, then answer timed trivia questions fetched from the Open Trivia Database.
 
 ## Features
 
-- Choose Quiz Type
-- Timer Quiz
-- Glassmorphsim 
-- Show the questions reviews
-
+- Select quiz category from live API data
+- Choose difficulty level: easy, medium, or hard
+- Choose question type: multiple choice or true/false
+- Set the number of questions
+- Timed quiz experience
+- Score summary after submission
+- Review correct, incorrect, and unanswered questions
+- Glassmorphism-style interface using Tailwind CSS
 
 ## Tech Stack
 
-**Client:** ReactJs, ViteJs, TailwindCSS
+- React
+- Vite
+- Tailwind CSS
+- React Router DOM
+- React Toastify
+- React Icons
+- Open Trivia Database API
 
+## Project Structure
 
-## Screenshots
-
-
-## See Demo
-
-Live Demo:- https://www.youtube.com/watch?v=DzDO-9D0nKU
-
-
-### Full Video Tutorial
-Video Link:- https://www.youtube.com/watch?v=DzDO-9D0nKU
-
-
-## Author
-
-- [@gtechofficial08](https://github.com/gtech-official08)
-
-
-## Acknowledgements
-
- - [Awesome Readme Templates Generator](https://readme.so/)
-
-
-## Support
-
-For support, email gtech.official08@gmail.com or DM us on Instagram.
-
-
-## Appendix
-
-Don't Forgot to Subscribe, Like, Comment, & Share.
-
-
-
-
+```txt
+quizApp/
+├── src/
+│   ├── api/
+│   │   └── quizAPI.jsx
+│   ├── components/
+│   │   ├── QuizOptions.jsx
+│   │   ├── QuizQuestions.jsx
+│   │   ├── QuizResult.jsx
+│   │   └── QuizTimer.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   └── Quiz.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── tailwind.config.js
+└── vite.config.js
